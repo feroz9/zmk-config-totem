@@ -7,6 +7,7 @@
  *   20  21 22 23 24 25     26 27 28 29 30  31
  *             32 33 34     35 36 37
  *
+ * MEDIA: 왼손 Q=USB 출력, W=블루투스 출력 / 오른손 Y~P=BT1~5, /=BT 지우기
  * Thumbs:  32 한/영 · MEDIA   33 BkSp · NAV   34 Enter · FUN
  *          35 Space · SYM     36 Shift        37 Del · NUM
  */
@@ -125,10 +126,12 @@
 
         media_layer {
             display-name = "MEDIA";
+            /* 왼손 Q = USB 출력, W = 블루투스 출력 (오른쪽 없이도 누를 수 있게 왼손에 둠)
+               오른손 윗줄 = 블루투스 1~5번, 오른손 / = 현재 슬롯 연결 정보 지우기 */
             bindings = <
-            &none          &none          &none           &none           &bootloader        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_CLR   &out OUT_TOG
-            &kp LGUI       &kp LALT       &kp LCTRL       &kp LSHFT       &none              &none         &kp C_PREV      &kp C_VOL_DN     &kp C_VOL_UP &kp C_NEXT
-&trans      &none          &none          &none           &none           &none              &none          &none          &none            &none        &bootloader  &trans
+            &out OUT_USB   &out OUT_BLE   &none           &none           &bootloader        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4
+            &kp LGUI       &kp LALT       &kp LCTRL       &kp LSHFT       &none              &none         &kp C_PREV      &kp C_VOL_DN     &kp C_VOL_UP  &kp C_NEXT
+&trans      &none          &none          &none           &none           &none              &none         &none           &none            &bootloader   &bt BT_CLR    &trans
                                           &trans          &none           &none              &kp C_PP      &kp C_MUTE      &kp C_STOP
             >;
         };
