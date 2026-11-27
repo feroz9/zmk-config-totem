@@ -29,9 +29,9 @@
 #define THUMBS 32 33 34 35 36 37
 
 /* ---------- timing: tune here ---------- */
-#define HRM_TAPPING_TERM   280   /* 길게 누르기 판정 (ms) */
+#define HRM_TAPPING_TERM   230   /* 길게 누르기 판정 (ms) */
 #define HRM_QUICK_TAP      175   /* 같은 키 연타 판정 (ms) */
-#define HRM_PRIOR_IDLE     150   /* 타이핑 중 모디파이어 판정 끄기 (ms) */
+#define HRM_PRIOR_IDLE     125   /* 타이핑 중 모디파이어 판정 끄기 (ms) */
 #define THUMB_TAPPING_TERM 200   /* 엄지 레이어 키 판정 (ms) */
 
 / {
